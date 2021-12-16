@@ -1,0 +1,256 @@
+/* .hide {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 1px;
+    color: transparent;
+} */
+
+/* header > nav */
+
+
+header {
+    display: flex;
+    /* max-width: 100%; */
+    width: 100%;
+    position: fixed;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+
+.menu-wrap li{
+    display: inline-block
+}
+
+/* section1 */
+.section1{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+    /* font-size: 3.6rem; */
+}
+
+.section1 .video-container{
+    height: 100vh;
+    z-index: -1;
+}
+.section1 .video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.section1 .container{
+    position: absolute;
+    top: 30%;
+    left: 50px;
+}
+
+.section1 p{
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* section1> select-box */
+.select-box{
+    margin-top: 50px;
+}
+.container .select-box div{
+    border: none;
+    border-bottom: 2px solid white;
+    margin: 22px 0 0;
+    width: 240px;
+    background: url('../img/라인svg/chevron-down.svg') no-repeat;
+    
+    background-position: 100% 50%;
+    padding: 10px 30px 10px 0;
+    color: white;
+}
+.container .select-box div .opt{
+    appearance: none;
+    border: none;
+    background: none;
+    color: white;
+    font-size: 1.8rem;
+    width: inherit;
+}
+
+.container .select-box div .opt option{
+    color: black;
+}
+
+/* section1 search arrow icon */
+
+/* section2 */
+.section2{
+    margin-top: 20px;
+    padding: 0 20px 0;
+}
+
+.section2 h2{
+    color: #1e1e1e;
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.sec2-wrap ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    grid-gap : 20px;
+    text-decoration: none;
+}
+
+.sec2-wrap ul li{
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    /* flex까지만 하면은 콘텐츠 높이 만큼만 카드 길이가 지정됨 */
+    min-height: 100%;
+    /* 자식이 부모의 크기를 온전히 가져갈 수 있게 */
+    flex-direction: column;
+    justify-content: space-between;
+    /* 카드안의 제목과 설명 그리고 저자는 space between */
+    position: relative;
+    top: 0;
+}
+.sec2-wrap ul li a .text{
+    margin-top: 16px;
+}
+.sec2-wrap ul li a .img{
+    background-image: url('../img/chris.jpg');
+    padding-bottom: 48%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.sec2-wrap ul li a .text strong{
+    color: #000;
+    height: 60px;
+    font-size: 20px;
+    font-weight: 700;
+    /* margin-top: 16px; */
+}
+.sec2-wrap ul li a .text p{
+    color: #616161;
+    height: 66px;
+    /* text-overflow: ellipsis; */
+    overflow: hidden;
+    line-height: 23px;
+    font-size: 15px;
+    margin-top : 10px;   
+}
+
+.sec2-wrap ul li a {
+    text-decoration: none;
+}
+
+.more{
+    position:absolute;
+    right: 0;
+    padding: 22px 20px 0 0;
+}
+.more a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #000;
+}
+
+.more a::after{
+    background-image: url('../img/라인svg/arrow-right-short.svg') no-repeat;
+    background-position: -32px -38px;
+    content: "";
+    top: 2px;
+    width: 21px;
+    height: 21px;
+    background-size: 96px 68px;
+
+}
+
+/* section3 */
+.section3{
+    background-color: #f7f8f9;
+    padding: 0 20px;
+}
+.section3 .bg{
+    background: url('../img/img1.jpg') no-repeat;
+    height: 261px;
+    padding-top: 61px;
+    margin-top: 80px;
+    background-size: cover;
+    /* background-size: cover; */
+    /* background-position: center center; */
+}
+
+.section3 .bg h2{
+    color: white;
+    padding: 0 20px;
+    font-size: 36px;
+    letter-spacing: -.8px;
+    font-weight: 700;
+}
+
+
+.sec3-wrap ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; 
+    grid-gap : 20px;
+   
+}
+.sec3-wrap ul li{
+    height: 315px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.08);
+    padding: 28px 28px 30px;
+}
+.sec3-wrap ul li a{
+    color: #1e1e1e;
+    text-decoration: none;
+    
+}
+
+.sec3-wrap ul li a strong{
+    font-size: 36px;
+}
+.sec3-wrap ul li a em{
+    font-size: 28px;
+    padding-top: 70px;
+}
+.sec3-wrap ul li a .job{
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 2.4rem;
+
+}
+.sec3-wrap ul li a .introduce{
+    font-size: 15px;
+    color: #616161;
+    line-height: 1.2rem;
+    /* padding-top: 29px; */
+    margin-top: 29px;
+}
+
+.sec3-wrap ul li a strong + em {
+    display: block;
+    font-weight: 900;
+    
+}
+
+.sec3-wrap ul li a p{
+    display: inline-block;
+}
